@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "ed49c24b-eeda-41e5-9a9e-10d17b3d60e3",
+		"name": "Api-Delivery-Food-Semana3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26925056",
+		"_collection_link": "https://warped-space-373224.postman.co/workspace/Team-Workspace~655e7a7b-9583-4527-821a-09a678967038/collection/26925056-ed49c24b-eeda-41e5-9a9e-10d17b3d60e3?action=share&creator=26925056&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Crear una Orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"John Doe\",\r\n    \"customerEmail\": \"johndoe@example.com\",\r\n    \"status\": \"PENDING\",\r\n    \"creationTime\": \"2022-04-28T14:30:00.000Z\",\r\n    \"estimatedDeliveryTime\": \"2022-04-28T15:30:00.000Z\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"Pizza\",\r\n            \"description\": \"Delicious pizza with pepperoni and mushrooms\",\r\n            \"price\": 9.99\r\n        },\r\n        {\r\n            \"name\": \"Coca Cola\",\r\n            \"description\": \"Refreshing drink\",\r\n            \"price\": 1.99\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar una Orden",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una segunda Orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Jane Smith\",\r\n    \"customerEmail\": \"janesmith@example.com\",\r\n    \"status\": \"PENDING\",\r\n    \"creationTime\": \"2022-05-01T15:00:00.000Z\",\r\n    \"estimatedDeliveryTime\": \"2022-05-01T16:00:00.000Z\",\r\n    \"items\": [\r\n        {\r\n            \"name\": \"Burger\",\r\n            \"description\": \"Juicy burger with cheese and bacon\",\r\n            \"price\": 12.99\r\n        },\r\n        {\r\n            \"name\": \"Fries\",\r\n            \"description\": \"Crispy fries with seasoning\",\r\n            \"price\": 4.99\r\n        },\r\n        {\r\n            \"name\": \"Milkshake\",\r\n            \"description\": \"Creamy vanilla milkshake\",\r\n            \"price\": 3.99\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
